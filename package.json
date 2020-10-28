@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --env development --open --config ./webpack/config",
-    "build": "webpack --env production --config ./webpack/config"
+    "build": "webpack --env production --config ./webpack/config",
+    "deploy": "gh-pages -d build"
   },
   "author": "Oleg Koryakov",
   "license": "ISC",
@@ -26,6 +27,7 @@
     "eslint-plugin-react": "^7.21.4",
     "eslint-plugin-react-hooks": "^4.1.2",
     "file-loader": "^6.2.0",
+    "gh-pages": "^3.1.0",
     "html-webpack-plugin": "^4.4.1",
     "mini-css-extract-plugin": "^0.11.1",
     "node-sass": "^4.14.1",
