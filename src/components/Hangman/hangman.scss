@@ -1,0 +1,20 @@
+.hangman {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  &__attempts {
+    position: relative;
+    font-size: 60px;
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%) translateY(100%);
+      width: 100%;
+      height: 26px;
+      background-image: url('./img/attempts-underline.png');
+    }
+  }
+}
