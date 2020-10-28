@@ -29,6 +29,15 @@ const baseConfig = {
         ],
       },
       {
+        test: /\.(png|jpe?g|svg)$/,
+        loader: 'url-loader',
+        options: {
+          publicPath: '../',
+          name: 'img/[name].[ext]',
+          limit: false,
+        },
+      },
+      {
         test: /\.scss$/,
         use: [
           'style-loader',
