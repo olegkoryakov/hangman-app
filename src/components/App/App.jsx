@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
-import Dialog from '../DIalog/DIalog';
+import Dialog from '../Dialog/Dialog';
+import Hangman from '../Hangman/Hangman';
 import Keyboard from '../Keyboard/Keyboard';
 import Word from '../Word/Word';
 
-const WORDS = ['й', 'ц', 'ц', 'ц', 'ц'];
+import './app.scss';
+
+const WORDS = ['собака', 'транспорт', 'духи', 'человек', 'реакт'];
 const splitWord = (word) => word.split('').map((letter, index) => ({ letter, id: index + 1, isGuessed: false }));
 
 const mappedWords = WORDS.map((word) => splitWord(word));
@@ -89,8 +92,8 @@ export default class App extends Component {
     return (
       <>
         {dialogHandler && dialogText && dialogButtonText
-          ? <Dialog text={dialogText} handler={dialogHandler} buttonText={dialogButtonText} />
-          : <Keyboard onKeyClick={this.onKeyClick} />}
+          ? <div className="app__dialog"><Dialog text={dialogText} handler={dialogHandler} buttonText={dialogButtonText} /></div>
+          : <div className="app__keyboard"><Keyboard word={currentWord} onKeyClick={this.onKeyClick} /></div>}
       </>
     );
   }
@@ -99,20 +102,20 @@ export default class App extends Component {
     const { words, attempts, currentWordIndex } = this.state;
     const currentWord = words[currentWordIndex];
     return (
-      <>
-        <h1>
-          level
+      <div className="app">
+        <h1 className="app__title">
+          Уровень
           {' '}
           {currentWordIndex + 1}
         </h1>
-        <p>
-          Попыток осталось:
-          {' '}
-          {attempts}
-        </p>
-        <Word word={currentWord} />
+        <div className="app__hangman">
+          <Hangman attempts={attempts} />
+        </div>
+        <div className="app__word">
+          <Word word={currentWord} />
+        </div>
         {this.renderControls()}
-      </>
+      </div>
     );
   }
 }

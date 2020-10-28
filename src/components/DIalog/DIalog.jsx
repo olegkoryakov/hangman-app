@@ -1,12 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './dialog.scss';
+
 const Dialog = ({ handler, text, buttonText }) => (
   <div className="dialog">
     <p className="dialog__text">
       {text}
     </p>
     <button
+      className="dialog__button"
       type="button"
       onClick={handler}
     >

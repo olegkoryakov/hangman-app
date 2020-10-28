@@ -4,18 +4,20 @@ import PropTypes from 'prop-types';
 import './word.scss';
 
 const Word = ({ word }) => (
-  <ul className="word__list">
-    {word.map(({ letter, isGuessed, id }) => (
-      <li
-        className="word__item"
-        key={id}
-      >
-        <div className="word__letter">
-          {isGuessed ? letter : ''}
-        </div>
-      </li>
-    ))}
-  </ul>
+  <div className="word">
+    <ul className="word__list">
+      {word.map(({ letter, isGuessed, id }) => (
+        <li
+          className="word__item"
+          key={id}
+        >
+          <div className="word__letter">
+            {isGuessed ? letter : ''}
+          </div>
+        </li>
+      ))}
+    </ul>
+  </div>
 );
 
 Word.propTypes = {

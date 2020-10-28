@@ -15,12 +15,12 @@ const KEY_LETTERS = [
   'ё',
 ];
 
-const mappedKeyLetters = KEY_LETTERS.map((letter, index) => ({ letter, id: index + 1 }));
+const mappedKeyLetters = KEY_LETTERS.map((keyLetter, index) => ({ keyLetter, id: index + 1 }));
 
-const Keyboard = ({ onKeyClick }) => (
+const Keyboard = ({ onKeyClick, word }) => (
   <div className="keyboard">
     <ul className="keyboard__list">
-      {mappedKeyLetters.map(({ letter, id }) => (
+      {mappedKeyLetters.map(({ keyLetter, id }) => (
         <li
           className="keyboard__item"
           key={id}
@@ -29,8 +29,10 @@ const Keyboard = ({ onKeyClick }) => (
             onClick={onKeyClick}
             type="button"
             className="keyboard__button"
+            disabled={word
+              .findIndex(({ letter, isGuessed }) => letter === keyLetter && isGuessed) !== -1}
           >
-            {letter}
+            {keyLetter}
           </button>
         </li>
       ))}
@@ -40,6 +42,7 @@ const Keyboard = ({ onKeyClick }) => (
 
 Keyboard.propTypes = {
   onKeyClick: PropTypes.func.isRequired,
+  word: PropTypes.arrayOf(PropTypes.shape()).isRequired,
 };
 
 export default Keyboard;
