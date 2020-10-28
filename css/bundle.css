@@ -1,0 +1,12 @@
+.dialog{display:flex;flex-direction:column;align-items:center;gap:20px;font-size:50px}.dialog__text{margin:0}.dialog__button{position:relative;padding:0;font-family:inherit;color:inherit;text-align:center;padding:4px 100px 4px 4px;font-size:30px;background-color:transparent;border:4px solid #3a3e76;border-radius:3px}.dialog__button:before{position:absolute;content:'';right:5px;top:50%;transform:translateY(-50%);width:82px;height:28px;background-image:url(../img/button-arrow.png)}.dialog__button:hover,.dialog__button:focus{border-color:rgba(58,62,118,0.5)}
+
+.hangman{display:flex;justify-content:space-around;align-items:center}.hangman__attempts{position:relative;font-size:60px}.hangman__attempts:before{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%) translateY(100%);width:100%;height:26px;background-image:url(../img/attempts-underline.png)}
+
+.keyboard__list{padding:0;margin:0;list-style:none;margin:0 auto;max-width:600px;display:flex;justify-content:center;flex-wrap:wrap;gap:25px}.keyboard__button{position:relative;text-transform:uppercase;padding:0;border:none;font-family:inherit;color:inherit;font-size:50px;background-color:transparent;overflow:visible}.keyboard__button:before{display:none;content:'';position:absolute;top:50%;left:50%;transform:translateX(-50%) translateY(-50%);width:40px;height:35px;background-image:url(../img/key-hightlight.png);background-position:center;background-repeat:no-repeat}.keyboard__button:focus{outline:none}.keyboard__button:hover:before,.keyboard__button:disabled:before{display:block}
+
+.word{padding-top:20px;padding-bottom:30px}.word__list{padding:0;margin:0;list-style:none;display:flex;justify-content:center;gap:15px}.word__item{text-transform:uppercase;font-size:50px;line-height:63px;height:63px;position:relative;width:72px;text-align:center}.word__item:before{position:absolute;content:'';width:72px;height:6px;background-image:url(../img/letter-underline.png);bottom:0;left:50%;transform:translateX(-50%) translateY(100%)}
+
+.app{width:900px;margin:0 auto}.app__title{font-size:100px;text-align:center;margin:0;padding-top:30px;padding-bottom:50px}
+
+body{margin:0;font-family:'Caveat';color:#3a3e76;background:linear-gradient(#bbb, transparent 1px),linear-gradient(90deg, #bbb, transparent 1px);background-size:15px 15px;background-position:center center}
+
