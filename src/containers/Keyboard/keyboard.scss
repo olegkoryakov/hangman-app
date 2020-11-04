@@ -1,0 +1,57 @@
+.keyboard {
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    margin: 0 auto;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+
+  &__button {
+    position: relative;
+    text-transform: uppercase;
+    padding: 0;
+    border: none;
+    font-family: inherit;
+    color: inherit;
+    font-size: 50px;
+    background-color: transparent;
+    overflow: visible;
+    &_unguessed {
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: 81px;
+        height: 71px;
+        background-image: url('./img/unguessed.png');
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+    &_guessed {
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: 50px;
+        height: 69px;
+        background-image: url('./img/guessed.png');
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}

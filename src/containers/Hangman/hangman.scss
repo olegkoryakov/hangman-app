@@ -1,9 +1,11 @@
 .hangman {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
   align-items: center;
 
-  &__attempts {
+  &__attempts-count {
     position: relative;
     font-size: 60px;
     &:before {

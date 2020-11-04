@@ -1,13 +1,5 @@
 .app {
-  width: 900px;
+  max-width: 900px;
+  padding: 0 30px;
   margin: 0 auto;
-
-  &__title {
-   font-size: 100px;
-   text-align: center;
-   margin: 0;
-
-   padding-top: 30px;
-   padding-bottom: 50px;
-  }
 }
