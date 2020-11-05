@@ -15,21 +15,11 @@
     font-family: inherit;
     color: inherit;
     text-align: center;
-    padding: 4px 100px 4px 4px;
+    padding: 5px 20px;
     font-size: 30px;
     background-color: transparent;
-    border: 4px solid #3a3e76;
+    border: 5px solid #3a3e76;
     border-radius: 3px;
-    &:before {
-      position: absolute;
-      content: '';
-      right: 5px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 82px;
-      height: 28px;
-      background-image: url('./img/button-arrow.png');
-    }
     &:hover, &:focus {
       outline: none;
       transform: scale(1.1);
