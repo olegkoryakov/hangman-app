@@ -44,9 +44,8 @@ const setNextCurrentIndexActionCreator = () => (dispatch, getState) => {
   const nextIndex = currentIndex + 1;
   const isMaxIndex = length === nextIndex;
 
-  if (isMaxIndex) {
+  if (isMaxIndex || !isWordGuessed) {
     dispatch(resetWordActionCreator());
-  } else if (isMaxIndex || !isWordGuessed) {
     dispatch(resetAttemptsActionCreator());
   } else {
     dispatch({ type: actions.SET_NEXT_CURRENT_INDEX, payload: nextIndex });
