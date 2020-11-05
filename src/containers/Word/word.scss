@@ -19,15 +19,5 @@
     position: relative;
     width: 72px;
     text-align: center;
-    &:before {
-      position: absolute;
-      content: '';
-      width: 72px;
-      height: 6px;
-      background-image: url('./img/letter-underline.png');
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%) translateY(100%);
-    }
   }
 }

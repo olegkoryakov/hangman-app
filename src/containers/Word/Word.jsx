@@ -13,7 +13,7 @@ const Word = ({ words, currentIndex }) => {
       key={index}
     >
       <div className="word__letter">
-        {isGuessed ? letter : ''}
+        {isGuessed ? letter : '_'}
       </div>
     </li>
   ));
