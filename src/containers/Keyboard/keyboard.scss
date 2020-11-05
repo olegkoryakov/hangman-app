@@ -28,11 +28,12 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translateX(-50%) translateY(-50%);
-        width: 81px;
-        height: 71px;
+        transform: translateX(-35%) translateY(-50%);
+        width: 50px;
+        height: 44px;
         background-image: url('./img/unguessed.png');
         background-position: center;
+        background-size: contain;
         background-repeat: no-repeat;
       }
     }
@@ -42,11 +43,12 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translateX(-50%) translateY(-50%);
-        width: 50px;
-        height: 69px;
+        transform: translateX(-35%) translateY(-50%);
+        width: 30px;
+        height: 49px;
         background-image: url('./img/guessed.png');
         background-position: center;
+        background-size: contain;
         background-repeat: no-repeat;
       }
     }
